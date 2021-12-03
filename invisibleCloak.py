@@ -10,6 +10,7 @@ for i in range(50):
 while cap.isOpened():
     ret, frame = cap.read()
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    #green color
     lower_bound = np.array([50, 80, 50])     
     upper_bound = np.array([90, 255, 255])
     mask = cv2.inRange(hsv, lower_bound, upper_bound)
